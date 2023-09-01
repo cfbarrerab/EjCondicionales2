@@ -1,0 +1,60 @@
+<script>
+    /*
+
+Vamos a crear dos variables, producto y cantidad.
+
+Producto            Precio
+---------------------------
+Refresco            1 euro
+Cerveza             2.2 euros
+Patatas             5 euros
+
+Dependiendo la cantidad y el producto solicitado, se debe calcular el valor del pedido
+
+    */
+
+var pedido;
+function calcPedido(producto, cantidad){
+    if (producto == "CERVEZA"){
+        pedido = cantidad * 2.2;
+    } else if (producto == "REFRESCO"){
+        pedido = cantidad;
+    } else if (producto == "PATATAS"){
+        pedido = cantidad * 5;
+    } else {
+        pedido = "NO SE RECONOCE EL PEDIDO";
+    }
+
+    return "El pedido tiene un valor de " + pedido + "euros.";
+}
+
+console.log(calcPedido("CERVEZA", 7));
+console.log(calcPedido("REFRESCO", 25));
+console.log(calcPedido("PATATAS", 9));
+console.log(calcPedido("NACHOS", 70));
+
+var orden;
+
+function salesOrder(prod, cant){
+    switch (prod){
+        case "CERVEZA":
+            orden = cant * 2.2;
+            break;
+        case "REFRESCO":
+            orden = cant;
+            break;
+        case "PATATAS":
+            orden = cant * 5;
+            break;
+        default:
+            orden = "ERROR!"
+    }
+
+    return orden;
+}
+
+console.log(salesOrder("CERVEZA", 7));
+console.log(salesOrder("REFRESCO", 25));
+console.log(salesOrder("PATATAS", 9));
+console.log(salesOrder("NACHOS", 70));
+</script>
